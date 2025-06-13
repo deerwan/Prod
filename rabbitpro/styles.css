@@ -1,0 +1,87 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url(http://api.zcz.me/pc.php) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 新拟态文本框样式 */
+.neu-textbox {
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    background-color: rgba(242, 242, 242, 0.7);
+    color: #105;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.neu-textbox:hover {
+    transform: translateY(-0.1em);
+    box-shadow: 0 0.75em 1.5em rgba(0, 0, 0, 0.2);
+    background-color: rgba(242, 242, 242, 0.9);
+}
+
+.neu-textbox:focus {
+    outline: none;
+    box-shadow: 0 0.75em 1.5em rgba(0, 0, 0, 0.2);
+    background-color: rgba(242, 242, 242, 0.9);
+}
+
+/* 居中样式 */
+.centered {
+    text-align: center;
+}
+
+.larger-font {
+    font-size: 20px;
+}
+
+/* 天气容器样式 */
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 跑马灯效果 */
+.marquee {
+    width: 100%;
+    background-color: rgba(240,240,240,0.8);
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    padding: 5px;
+}
+
+.marquee span {
+    display: inline-block;
+    margin-right: -100%;
+    animation: marquee 15s linear infinite;
+    box-sizing: border-box;
+    animation-fill-mode: forwards;
+    padding-left: 100%;
+    color: #255;
+    text-shadow: 1px 1px 0 #ddd;
+    font-family: inherit;
+    font-size: 1.2em;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
